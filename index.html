@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+    <title>GlitchOS</title>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+</head>
+<body><header><section>
+    <h1>Glitch</h1><h1 class="red">O</h1><h1>S</h1>
+    <div class="bar"><p class="os">Welcome to GlitchOS</p><h6 id="timeElement" >Time</h6></div>
+    </section></header>
+    <div class="window" id="window">
+        <div class="windowheader"id="windowheader" ><p class="iris" >IRIS</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="welcomeclose">🔴</p></div><p class="hello">Hello User! Iris here "The blue circle".
+        I contr0l t̷h̸e̶ os and makes this os look like a g̸l̷i̶t̸c̷h̶ mess.
+        But I am also herEe to h̶e̷l̸p̷ you navigate this g̶l̷i̸t̶c̷h̸y̶ world.
+        I mi̶g̶ht look liike <del>foe</del> but I am <b>FRIENDLY!</b>...fr.r....friendly.</p>
+    
+    </div>
+    <div id="apps" onclick="handleIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img src="calendar.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div class="calendar" id="calendar" style="display: none;">
+        <div class="windowheader"id="calendarheader" ><p class="iris">Calendar</p><div class="button"><p id="Calendarfullscreen"style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="calendarmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="calendarclose">🔴</p></div>
+        </div>
+            <div id="calendarBody"></div>
+    
+    </div>
+    
+
+    <div id="noteicon" onclick="handleNoteIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img src="notes.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div class="Notes" id="notes" style="display: none;">
+        <div class="windowheader"id="notesheader" ><p class="iris">Notes</p><div class="button"><p id="notesfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="notesmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="noteclose">🔴</p></div></div>
+        <textarea id="noteTextArea" placeholder="Hey you Human !!!Write your notes here..."></textarea>
+    
+    </div>
+
+    <div id="terminalicon" onclick="handleTerminalIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img src="termi.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    
+    <div class="terminal" id="terminal" style="display: none;">
+        <div class="windowheader"id="terminalheader"><p class="iris">Terminal</p><div class="button"><p id="terminalfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="terminalmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="terminalclose">🔴</p></div></div>
+        <p style="display:flex; gap: 8px; color: rgb(104, 104, 105); font-family: 'Courier New', Courier, monospace;  font-size: 14px; padding: 10px;" >Gl̶it̷c̶h OS Terminal V 1.0</p>
+        <p  style="color: rgb(106, 108, 109); font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 10px;">Type <b style="color: red;">help</b> for available commands.</p>
+        <p id="read"></p>
+    <span>></span><input type="text" id="type" autocomplete="off">
+    
+    </div>
+    
+   
+
+        <video autoplay muted playsinline loop style="cursor: pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="welcomeopen">
+            <source src="tech.mp4" type="video/mp4">
+        </video>
+    <script src="main.js"  defer>
+    
+    </script>
+    
+
+</body>
+
+</html>

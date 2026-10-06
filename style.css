@@ -1,0 +1,362 @@
+h1{
+    color: rgb(27, 27, 41);
+    font-size: 5em;
+    font-family: 'Rubik Glitch', system-ui;
+    text-align: left;   
+    display: inline;
+    
+    
+    
+}
+.red{
+    color: rgb(255, 0, 0);
+    font-size: 5em;
+    font-family: 'Rubik Glitch', system-ui;
+    text-align: left;   
+    display: inline;
+}
+.os{
+    color: rgb(19, 17, 27);
+    font-size: 2em;
+    text-align: left;
+    font-family: 'Rubik Glitch', system-ui;
+
+}
+ video{
+    
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 50%;
+    box-shadow: 0px 0px 10px black;
+    align-items: center;
+    display:block;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    position:absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    z-index:-1;
+
+
+}
+body{
+    
+    background-image: url('https://imgs.search.brave.com/7P96sIqtxl16RRnwl6zmIyH7OrbjCjseN7cK07lzJE4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTMuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhkREJpWmpWNWMy/UnJPR0ZuYVdobU5U/WnZkWFp5YlhONmNX/d3dPWEJsYldOM1lX/RmxjWFUwWXlabGNE/MTJNVjluYVdaelgz/TmxZWEpqYUNaamRE/MW4vRU9hRVdvb1J5/azZKRENqQzh1LzIw/MC5naWY.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    position:fixed;
+    inset:-1px;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+    width:100%;
+    overflow-x: hidden;
+    cursor: url('glitch-removebg-preview.png'), auto;
+    
+}
+
+
+
+ 
+
+section{
+    text-align: left;
+    justify-content: space-between;
+    background:linear-gradient(to right, rgb(0, 0, 0), rgb(27, 27, 27));
+    
+   
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.window {
+    position: absolute;
+     background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10%;
+    top: 130px;
+    left:20px;
+    width:55%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+    overflow: hidden;
+}
+
+.hello{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    color: rgb(194, 185, 185);
+    margin: 10px 0;
+    display: block;
+    padding: 10px;
+    
+
+}
+.windowheader{
+   width: 100%;
+   height: 30px;
+   box-sizing: border-box;
+   padding: 0 70px;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   border-bottom: 1px solid white;
+   cursor: move;
+   user-select: none;
+     background:linear-gradient(to right, rgb(31, 30, 30), rgb(27, 27, 27));
+   
+   justify-content: space-between;
+   cursor:url('drag-removebg-preview.png') 16 16, auto;
+   
+}
+.iris{
+    color:rgb(0, 0, 0);
+    font-family: 'Rubik Glitch', system-ui;
+    font-size: 25px;
+    right: 10%;
+    padding:10px;
+
+}
+
+h6{
+    color: rgb(163, 19, 19);
+    font-size: xx-large;
+    font-family:'Courier New', Courier, monospace;    
+}
+.bar{
+    display: flex;
+    justify-content: space-between;
+
+}
+img{
+    size: cover;
+    border-radius: 10%;
+    transition: transform 0.2s;
+    
+}
+img:hover{
+    box-shadow: 0px 0px 20px rgb(119, 0, 0);
+    transform: scale(1.15);
+    
+}
+
+
+
+.calendar{
+    
+    position: absolute;
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10%;
+    top: 130px;
+    left:20px;
+    width:40%;
+    height: 55%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+    overflow: hidden;
+   
+}
+
+#calendarBody{
+    padding: 10px;
+    height: 350px;
+     color: white;
+     overflow-y: auto;
+     z-index: 1;
+     
+
+}
+#calendarBody .fc{
+    height: 100%;
+    font-family: 'Rubik Glitch', system-ui;
+    font-size: 14px;
+}
+#calendarBody  .fc-scroller::-webkit-scrollbar {
+    width: 8px;
+}
+#calendarBody  .fc-scroller::-webkit-scrollbar-track {
+    background: #012542; 
+}
+#calendarBody  .fc-scroller::-webkit-scrollbar-thumb {
+    background: #4186a7;
+
+}
+#calendarBody  .fc-scroller::-webkit-scrollbar-thumb:hover {
+    background: #4ca9ce; 
+}
+
+
+#calendarBody  .fc-toolbar-title{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: white;
+    
+}
+#calendarBody .fc-button{
+  
+    color: white;
+     background:radial-gradient( rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 1px solid rgb(94, 91, 91);
+     cursor: url('pointer-removebg-preview.png') 16 16, auto;
+}
+#calendarBody .fc-button:hover{
+    
+    background:#444;
+    
+}
+   
+#calendarBody .fc-col-header-cell-cushion{
+    color: white;
+    text-decoration: none;
+    padding : 5px;
+    box-shadow: none !important;
+    border-radius:0 !important;
+    text-transform: uppercase;
+
+}
+#calendarBody .fc-daygrid-day-number{
+    color: white;
+    text-decoration: none;
+    padding : 5px;
+
+    box-shadow: none !important;
+    border-radius:0 !important;
+}
+#calendarBody .fc-daygrid-day{
+   background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+   border: 1px solid rgb(94, 91, 91);
+}
+#calendarBody .fc-day-today{
+    background: radial-gradient( rgb(110, 203, 231), rgb(255, 0, 0)  ) !important;
+    
+}
+#calendarBody .fc-daygrid-day-frame{
+   min-height: 100px;
+}
+
+
+.Notes{
+    
+    position: absolute;
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10%;
+    top: 130px;
+    left:20px;
+    width:40%;
+    height: 55%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+    overflow: hidden;
+    background: black;
+    opacity: 1;
+    z-index: 2;
+    
+}
+
+#calendarBody .fc-daygrid-day:hover{
+    background-color: rgb(241, 1, 1);
+    color: white;
+    border-radius:0;
+    border: 1px solid rgb(94, 91, 91);
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+
+
+   min-height: 100px;
+}
+
+#calendarBody .fc-daygrid-day-number:hover{
+    background-color:none !important;
+    box-shadow: none !important;
+    border-radius:0 !important;
+}
+
+.Notes #noteTextArea{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    color: white;
+    border: none;
+    resize: none;
+    padding: 10px;
+    box-sizing: border-box;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+.terminal {
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(20, 20, 20));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10%;
+    top: 130px;
+    left:20px;
+    width:55%;
+    height: 55%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+    overflow: hidden;
+    z-index: 3;
+    
+}
+.terminal output {
+    color: white;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 14px;
+    padding: 10px;
+}
+
+.terminal #type {
+    flex: 1;
+    
+    background:transparent;
+    color: rgb(117, 117, 119);
+    OUTLINE: none;
+    font-family: 'Courier New', Courier, monospace; 
+    border: none;
+    font-size: 14px;
+    width: 50%;
+    caret-color: rgb(255, 0, 0);
+    caret-shape: block;
+}
+.terminal #read {
+    display:flex;
+    gap: 8px;
+    color: rgb(104, 104, 105);
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 14px;
+    padding: 10px;
+}   
+.terminal span {
+   color: rgb(117, 118, 119);
+   display:inline;
+   padding: 10px;
+}
+.button{
+    display: flex;
+    gap: 10px;
+}
+
+#window:hover{
+    box-shadow:0px 0px 10px #ff0000;
+    border-color: #ff0000;
+}
+#calendar:hover{
+    box-shadow:0px 0px 10px #ff0000;
+    border-color: #ff0000;
+}
+#notes:hover{
+    box-shadow:0px 0px 10px #ff0000;
+    border-color: #ff0000;
+}
+#terminal:hover{
+    box-shadow:0px 0px 10px #ff0000;
+    border-color: #ff0000;
+}
