@@ -1,25 +1,36 @@
-h1{
+.text{
     color: rgb(27, 27, 41);
     font-size: 5em;
     font-family: 'Rubik Glitch', system-ui;
     text-align: left;   
     display: inline;
+     margin-top: 0;
+    margin-bottom: 0;
     
     
     
+}
+.text2{  color: rgb(27, 27, 41);
+    font-size: 5em;
+    font-family: 'Rubik Glitch', system-ui;
 }
 .red{
     color: rgb(255, 0, 0);
     font-size: 5em;
     font-family: 'Rubik Glitch', system-ui;
     text-align: left;   
-    display: inline;
+      margin-top: 0;
+    margin-bottom: 0;
+    
 }
 .os{
     color: rgb(19, 17, 27);
     font-size: 2em;
     text-align: left;
     font-family: 'Rubik Glitch', system-ui;
+      margin-top: 4px;
+    margin-bottom: 4px;
+    line-height: 1.2;
 
 }
  video{
@@ -63,7 +74,7 @@ body{
 
 section{
     text-align: left;
-    justify-content: space-between;
+  
     background:linear-gradient(to right, rgb(0, 0, 0), rgb(27, 27, 27));
     
    
@@ -83,9 +94,13 @@ section{
     top: 130px;
     left:20px;
     width:55%;
+    height: 140px;
     box-sizing: border-box;
     box-shadow: 0px 0px 10px rgb(207, 207, 207);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .hello{
@@ -93,8 +108,10 @@ section{
     font-size: 17px;
     color: rgb(194, 185, 185);
     margin: 10px 0;
-    display: block;
     padding: 10px;
+    overflow-y: auto;
+    min-height: 0;
+    flex: 1;
     
 
 }
@@ -109,6 +126,7 @@ section{
    border-bottom: 1px solid white;
    cursor: move;
    user-select: none;
+   flex-shrink:0;
      background:linear-gradient(to right, rgb(31, 30, 30), rgb(27, 27, 27));
    
    justify-content: space-between;
@@ -132,15 +150,16 @@ h6{
 .bar{
     display: flex;
     justify-content: space-between;
+    margin-top: 0;
 
 }
-img{
+.icon{
     size: cover;
     border-radius: 10%;
     transition: transform 0.2s;
     
 }
-img:hover{
+.icon:hover{
     box-shadow: 0px 0px 20px rgb(119, 0, 0);
     transform: scale(1.15);
     
@@ -181,15 +200,34 @@ img:hover{
 #calendarBody  .fc-scroller::-webkit-scrollbar {
     width: 8px;
 }
+::-webkit-scrollbar {
+    width: 8px;
+}
 #calendarBody  .fc-scroller::-webkit-scrollbar-track {
-    background: #012542; 
+    background: #2e0000; 
+}
+::-webkit-scrollbar-track {
+    background: #2e0000; 
 }
 #calendarBody  .fc-scroller::-webkit-scrollbar-thumb {
-    background: #4186a7;
+    background:linear-gradient(to bottom , rgb(97, 1, 1) , rgb(145, 1, 1), rgb(255, 4, 4), rgb(145, 1, 1), rgb(97, 1, 1));
+    border-radius:2px;
+    box-shadow: 0px 0px 10px #ff0000;
+
+}
+::-webkit-scrollbar-thumb {
+     background:linear-gradient(to bottom , rgb(97, 1, 1) , rgb(145, 1, 1), rgb(255, 4, 4), rgb(145, 1, 1), rgb(97, 1, 1));
+    border-radius:2px;
+    box-shadow: 0px 0px 10px #ff0000;
+
+
 
 }
 #calendarBody  .fc-scroller::-webkit-scrollbar-thumb:hover {
-    background: #4ca9ce; 
+    background: #ff0000; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ff0000; 
 }
 
 
@@ -258,6 +296,8 @@ img:hover{
     background: black;
     opacity: 1;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
     
 }
 
@@ -287,7 +327,9 @@ img:hover{
     resize: none;
     padding: 10px;
     box-sizing: border-box;
-
+    overflow-y: auto;
+    min-height: 0;
+    flex:1;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
 }
@@ -303,14 +345,22 @@ img:hover{
     box-sizing: border-box;
     box-shadow: 0px 0px 10px rgb(207, 207, 207);
     overflow: hidden;
-    z-index: 3;
-    
+    z-index: 1;
+   
+}
+.scroll{
+    height: 90%;
+    min-height: 0;
+    overflow-y: auto;
+
+
 }
 .terminal output {
     color: white;
     font-family: 'Courier New', Courier, monospace; 
     font-size: 14px;
     padding: 10px;
+   
 }
 
 .terminal #type {
@@ -325,20 +375,25 @@ img:hover{
     width: 50%;
     caret-color: rgb(255, 0, 0);
     caret-shape: block;
+    
 }
 .terminal #read {
     display:flex;
+    flex-direction: column;
+    align-self: flex-start;
     gap: 8px;
     color: rgb(104, 104, 105);
     font-family: 'Courier New', Courier, monospace; 
     font-size: 14px;
     padding: 10px;
+    
 }   
 .terminal span {
    color: rgb(117, 118, 119);
    display:inline;
    padding: 10px;
 }
+
 .button{
     display: flex;
     gap: 10px;
@@ -359,4 +414,288 @@ img:hover{
 #terminal:hover{
     box-shadow:0px 0px 10px #ff0000;
     border-color: #ff0000;
+}
+.video{
+    position: absolute;
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10%;
+    top: 130px;
+    left:20px;
+    width:40%;
+    height: 55%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+    overflow: hidden;
+    background: black;
+    opacity: 1;
+    z-index: 2;
+}
+#video:hover{
+    box-shadow: 0px 0px 10px red;
+    border-color: red;
+}
+
+.animation{
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    color:grey;
+    animation: exit 0.7s ease 6s forwards;
+}
+.content{
+    position: relative;
+    z-index: index 2;
+    width: min(90%, 650px);
+    text-align: center;
+    animation: enter 0.8s ease both;
+    
+
+}
+.para,.load{
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color:#999;
+
+    
+}
+.para{
+    animation: flicker 1.3s infinite;
+
+}
+.logo{
+    position: relative;
+    margin: 30px 0;
+    font-family: "Rubik Glitch",monospace;
+    font-size: clamp(42px, 10vw , 90px);
+    font-weight: normal;
+    letter-spacing: 4px;
+    color:aliceblue;
+    animation: distort 0.25s infinite;
+}
+.logo span{
+    color:#ff1744;
+
+}
+.logo::after,.logo::before{
+    content: attr(data-text);
+    position: absolute;
+    inset:0;
+    overflow:hidden;
+    pointer-events: none;
+}
+.logo::before{
+    color:#00ffff;
+    animation:glitch-one 0.4s infinite steps(2);
+}
+
+.logo::after{
+    color: #ff1744;
+    animation: glitch-one 0.4s infinite steps(2);
+
+}
+.load{
+    margin-top: 35px;
+    animation: flicker 0.8s infinite;
+}
+.boot-loader{
+    width: min(280px 75%);
+    height: 3px;
+    margin: 22px auto;
+    background:#252525;
+    overflow: hidden;
+}
+.boot-loader-filll{
+    height: 100%;
+    width: 100%;
+    background: #ff1744;
+    transform: scaleX(0);
+    transform-origin:left;
+    animation: load 5.5s ease forwards;
+
+}
+.lines{
+    position: absolute;
+    inset:0;
+    pointer-events: none;
+    background: repeating-linear-gradient(to bottom transparent 0px, transparent 3px,rgba(255 255 255, 0.035) 4px); 
+
+}
+@keyframes enter{
+    from{
+        opacity: 0;
+        transform: scale(0.88);
+        filter:blur(12px)
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+        filter:blur(0);
+    }
+}
+@keyframes distort{
+    0%, 85%, 100%{
+        transform: translateX(0);
+    }
+    88% {
+        transform: translateX(-4px) skewX(4deg);
+    }
+    92% {
+        transform: translateX(4px) skewX(-4deg);
+    }
+}
+@keyframes glitch-one{
+    0%, 100%{
+        clip-path: inset(0 0 85% 0);
+        transform: translateX(-5px);
+    }
+    50%{
+        clip-path: inset(40% 0 35% 0);
+        transform: translateX(5px);
+    }
+}
+@keyframes glitch-two{
+    0%, 100%{
+        clip-path: inset(70% 0 0 0);
+        transform: translateX(5px);
+    }
+    50%{
+        clip-path: inset(10% 0 65% 0);
+        transform: translateX(-5px);
+    }
+}
+@keyframes flicker{
+    0%, 94%, 100% {opacity: 1;}
+    95%{opacity: 0.25;}
+    97%{opacity: 0.8;}
+}
+@keyframes load{
+    to{
+        transform: scaleX(1);
+    }
+}
+@keyframes exit{
+    to{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+@media(prefers-reduced-motion: reduce){
+    .logo,
+    .logo::before,
+    .logo::after,
+    .para,
+    .load{animation: none;}
+}
+#animation{
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    
+    z-index: 999999;
+    box-sizing: border-box;
+}
+#animation .content{
+    position: relative;
+    width:90%;
+    max-width: 650px;
+    margin:0 auto;
+    text-align:center;
+
+}
+.gif{
+    position: absolute;
+    inset:-8px;
+    background-image: url('https://imgs.search.brave.com/7P96sIqtxl16RRnwl6zmIyH7OrbjCjseN7cK07lzJE4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YTMuZ2lwaHkuY29t/L21lZGlhL3YxLlky/bGtQVGM1TUdJM05q/RXhkREJpWmpWNWMy/UnJPR0ZuYVdobU5U/WnZkWFp5YlhONmNX/d3dPWEJsYldOM1lX/RmxjWFUwWXlabGNE/MTJNVjluYVdaelgz/TmxZWEpqYUNaamRE/MW4vRU9hRVdvb1J5/azZKRENqQzh1LzIw/MC5naWY.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+    z-index:-1;
+}
+.other{
+        color: white;
+        padding: 0 10px;
+        font-family: 'Courier New', Courier, monospace;
+     background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 1px solid rgb(94, 91, 91);
+     cursor: url('pointer-removebg-preview.png') 16 16, auto;
+}
+#prev,#next{
+    font-size: 50px;
+    width: 25%;
+    height: 100%;
+     color:  rgb(94, 91, 91);
+        padding: 0 10px;
+        font-family: 'Courier New', Courier, monospace;
+     background:radial-gradient( rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 2px solid rgb(94, 91, 91);
+     cursor: url('pointer-removebg-preview.png') 16 16, auto;
+}
+#prev:hover,#next:hover{
+    color: #fd0000;
+    text-shadow: 0 0 10px  white;
+    border: 2px solid rgb(248, 0, 0);
+    box-shadow:0 0 10px #252525;
+     background:radial-gradient( rgb(65, 64, 64), rgb(27, 27, 27));
+}
+
+#weather,#timeElement{
+    margin:0;
+}
+.searchin{
+    background-color: #3d3c3c;
+    color:#fffdfd;
+    border-radius: 20px;
+    width: 300px;
+    font-size: large;
+    align-self: center;
+    height: 20px;
+    padding: 0px 4px;
+    border: 1px solid  #353434;
+    box-shadow: 0px 0px  10px #2c2b2b;
+}
+grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    justify-content: center;
+}
+.gallery{
+    
+    position: absolute;
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgb(27, 27, 27));
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10%;
+    top: 130px;
+    left:20px;
+    width:40%;
+    height: 55%;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 10px rgb(207, 207, 207);
+    overflow: hidden;
+    background: black;
+    opacity: 1;
+    z-index: 2;
+    
+}
+.pic{
+    width: 300px;
+    height: 300px;
+    size: 100px;
+    align-items: center;
+}
+.container{
+    align-items: center;
+    overflow-y: auto;
+    height: 400px;
 }

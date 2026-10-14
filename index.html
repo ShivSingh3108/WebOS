@@ -9,19 +9,49 @@
 <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
     <title>GlitchOS</title>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.19/index.global.min.js"></script>
+    <script>const bootscreen = document.getElementById("animation");
+        if(bootscreen){
+            setTimeout(() =>{bootscreen.remove();}, 6700);
+        }
+    </script>
+    <meta name="referrer"
+    content="strict-origin-when-cross-origin">
 </head>
-<body><header><section>
-    <h1>Glitch</h1><h1 class="red">O</h1><h1>S</h1>
-    <div class="bar"><p class="os">Welcome to GlitchOS</p><h6 id="timeElement" >Time</h6></div>
+<body><header>
+    <section>
+        <div style="display: flex; justify-content: space-between;">
+    <div style="display: flex;  align-items: center; ">
+        <h1 class="text">Glitch</h1><h1 class="red">O</h1><h1 class="text">S</h1></div><div style="display: flex; justify-content: end; align-items: center;"><h6 id="weather" style="align-items: center;" >Weather</h6> </div> 
+</div>
+    <div class="bar"><p class="os">Welcome to GlitchOS</p>
+        <div class="searchbar" style="display: flex; justify-content: end; ">
+        <form action="https://www.google.com/search"  method="get" target="_blank">
+            <div class="search">
+                <input class="searchin" name="q" type="search" placeholder="search" >
+            </div>
+        </form>
+        </div>
+        </form>
+    <h6 id="timeElement" >Time</h6>
+</div>
     </section></header>
+    
     <div class="window" id="window">
         <div class="windowheader"id="windowheader" ><p class="iris" >IRIS</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="welcomeclose">🔴</p></div><p class="hello">Hello User! Iris here "The blue circle".
         I contr0l t̷h̸e̶ os and makes this os look like a g̸l̷i̶t̸c̷h̶ mess.
         But I am also herEe to h̶e̷l̸p̷ you navigate this g̶l̷i̸t̶c̷h̸y̶ world.
-        I mi̶g̶ht look liike <del>foe</del> but I am <b>FRIENDLY!</b>...fr.r....friendly.</p>
+        I mi̶g̶ht look liike <del>foe</del> but I am <b>FRIENDLY!</b>...fr.r....friendly.<br><br>
+        Here's the obv1ous gu1de:<br>
+        On your r̷i̸g̷h̶t̸, you'll see apps or w̷i̸n̷d̶o̸w̷s̶—whatever you call them—named C̷a̸l̷e̶n̸d̷a̶r̸, N̷o̸t̷e̶s̸, T̷e̸r̷m̶i̸n̷a̶l̸, G̷l̸i̷t̶c̸h̷T̶V̸, G̷a̸l̷l̶e̸r̷y̸. I ain't gonna explain what they h̶a̷v̸e̶ or what they d̷o̸. Try it y̷o̸u̷r̶s̸e̷l̶f̸. I̷ dare you.<br>
+        N̷e̸x̷t̶...<br>
+        On t̷o̸p̶, you'll see the N̷a̸m̷e̶ and g̷r̸e̷e̶t̸i̷n̶g̸s̶. But more importantly, you'll see the s̷e̸a̷r̶c̸h̷ b̶a̷r̸, the t̷i̸m̷e̶ and....... W̷e̸a̷t̶h̸e̷r̸.<br>
+        And at the s̷t̸a̷r̶t̸i̷n̶g̸, you must have a l̷o̸a̷d̶i̸n̷g̶ s̷c̸r̷e̶e̸n̸. Don't blink. Or do. I don't c̷a̸r̶e̸.<br>
+        And importantly, at the c̷e̸n̷t̶e̸r̶—or what I like to call the c̷o̸r̷e̶ (sounds cool, right?)—you'll f̷i̸n̷d̶ m̷e̸.<br>
+        THE ONE. THE ONLY. I̷R̸I̷S̸.
+</p>
     
     </div>
-    <div id="apps" onclick="handleIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img src="calendar.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div id="apps" onclick="handleIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img class="icon" src="calendar.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
     <div class="calendar" id="calendar" style="display: none;">
         <div class="windowheader"id="calendarheader" ><p class="iris">Calendar</p><div class="button"><p id="Calendarfullscreen"style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="calendarmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="calendarclose">🔴</p></div>
         </div>
@@ -30,29 +60,57 @@
     </div>
     
 
-    <div id="noteicon" onclick="handleNoteIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img src="notes.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div id="noteicon" onclick="handleNoteIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img class="icon" src="notes.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
     <div class="Notes" id="notes" style="display: none;">
         <div class="windowheader"id="notesheader" ><p class="iris">Notes</p><div class="button"><p id="notesfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="notesmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="noteclose">🔴</p></div></div>
-        <textarea id="noteTextArea" placeholder="Hey you Human !!!Write your notes here..."></textarea>
+        <div id="noteTextArea"><textarea id="noteTextArea" placeholder="Hey you Human !!!Write your notes here..."></textarea></div>
     
     </div>
 
-    <div id="terminalicon" onclick="handleTerminalIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img src="termi.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div id="terminalicon" onclick="handleTerminalIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img class="icon" src="termi.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
     
     <div class="terminal" id="terminal" style="display: none;">
-        <div class="windowheader"id="terminalheader"><p class="iris">Terminal</p><div class="button"><p id="terminalfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="terminalmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="terminalclose">🔴</p></div></div>
+        <div class="windowheader"id="terminalheader"><p class="iris">Terminal</p><div class="button"><p id="terminalfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="terminalmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="terminalclose">🔴</p></div>
+    </div><div class="scroll">
         <p style="display:flex; gap: 8px; color: rgb(104, 104, 105); font-family: 'Courier New', Courier, monospace;  font-size: 14px; padding: 10px;" >Gl̶it̷c̶h OS Terminal V 1.0</p>
         <p  style="color: rgb(106, 108, 109); font-family: 'Courier New', Courier, monospace; font-size: 14px; padding: 10px;">Type <b style="color: red;">help</b> for available commands.</p>
         <p id="read"></p>
     <span>></span><input type="text" id="type" autocomplete="off">
-    
+     </div>
     </div>
-    
+     <div id="vidicon" onclick="handleVideoIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img class="icon" src="vid.gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div class="video" id="video" style="display: none;">
+        <div class="windowheader"id="vidheader" ><p class="iris">Glitch TV</p><div class="button"><p id="vidfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="vidmin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="vidclose">🔴</p></div></div>
+        <iframe class="yt" id="player" style="  
+    width: 505px;
+    height:250px;
+    box-shadow: 0px 0px 10px black;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    position: relative;
+    left:3.5%; "  src="https://www.youtube.com/embed/A4qHcD-hiUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div id="other" class="other" style="display: flex; justify-content:space-between;"><p id="prev" >< </p><p id="next" style="text-align:right;" > ></p></div>
+    </div>
+    <div id="galleryicon" onclick="handleGalleryIconTap(this)" style="padding-top: 15px; margin-right: 20px; margin-left:auto; width: fit-content;" ><img class="icon" src="album (1).gif" style="width: 80px; height:auto; border-radius: 10%;"></img></div>
+    <div class="gallery" id="gallery" style="display: none;">
+        <div class="windowheader"id="galleryheader" ><p class="iris">Gallery</p><div class="button"><p id="galleryfullscreen" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟢</p><p id="gallerymin" style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;">🟡</p><p style="cursor:pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="galleryclose">🔴</p></div></div>
+        <div class="container" id="contain" ><grid id="table">
+            <img class="pic" src="img1.jpeg"></img>
+            <img class="pic" src="img2.jpeg"></img>
+            <img class="pic" src="img3.jpeg"></img>
+            <img class="pic" src="img4.jpeg"></img>
+            <img class="pic" src="img5.jpeg"></img>
+            <img class="pic" src="img6.jpeg"></img>
+        </grid></div>
+    </div>
+
    
 
         <video autoplay muted playsinline loop style="cursor: pointer; cursor:url('pointer-removebg-preview.png') 16 16, auto;" id="welcomeopen">
             <source src="tech.mp4" type="video/mp4">
         </video>
+        <div id="animation" class="animation"><div class="lines"></div><div class="gif"></div><div class="content"><p class="para">BREAKING THE SYSTEM</p><h1 class="logo" data-text="GLITCHOS">GLITCH<span>O</span>S</h1><p class="load">LOADING GLITCHES</p><div class="boot-loader"><div class="boot-loader-filll"></div></div> </div>
     <script src="main.js"  defer>
     
     </script>
